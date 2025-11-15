@@ -49,7 +49,7 @@ def process_file(path):
 
     for i, line in enumerate(lines):
         if OLD in line:
-            print("\n📌 File:", path)
+            print("\n File:", path)
             print(f"  Line {i+1}: {line.strip()}")
 
             if ask(f"Replace '{OLD}' with '{NEW}' ?"):
@@ -79,12 +79,12 @@ def process_file(path):
     if modified:
         backup_path = path + ".backup_before_replacement"
         shutil.copy2(path, backup_path)
-        print(f"  🔒 Backup saved: {backup_path}")
+        print(f"   Backup saved: {backup_path}")
 
         with open(path, "w", encoding="utf-8", errors="ignore") as f:
             f.writelines(lines)
 
-        print(f"  ✅ Updated file: {path}")
+        print(f"   Updated file: {path}")
 
 def scan_repo(base="."):
 
@@ -108,5 +108,5 @@ if __name__ == "__main__":
     scan_repo(".")
     save_report()
 
-    print("\n🎉 Replacement process completed.\n")
+    print("\n Replacement process completed.\n")
 

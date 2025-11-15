@@ -69,8 +69,8 @@ def print_results():
     print("\n=== MATCHES FOUND ===\n")
 
     for entry in REPORT["matches"]:
-        print(f"📌 File: {entry['file']}")
-        print(f"  Line {entry['line_number']} | Keyword: {entry['keyword']}")
+        print(f" File: {entry['file']}")
+        print(f" Line {entry['line_number']} | Keyword: {entry['keyword']}")
         print(f"    → {entry['content']}\n")
 
 
@@ -79,5 +79,5 @@ if __name__ == "__main__":
     scan_repo(".")
     print_results()
     save_report()
-    print("\n✅ Scan complete.\n")
+    print("\n Scan complete.\n")
 
