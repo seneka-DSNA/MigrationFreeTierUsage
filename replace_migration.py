@@ -35,7 +35,7 @@ def save_report():
     with open("report_replacements.json", "w", encoding="utf-8") as f:
         json.dump(REPORT, f, indent=4)
 
-    print("\n📄 report_replacements.json generated.\n")
+    print("\n report_replacements.json generated.\n")
 
 def process_file(path):
     try:

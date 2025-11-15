@@ -59,7 +59,7 @@ def save_report():
     with open("report.json", "w", encoding="utf-8") as f:
         json.dump(REPORT, f, indent=4)
 
-    print("\n📄 report.json generated.")
+    print("\n report.json generated.")
 
 def print_results():
     if not REPORT["matches"]:
