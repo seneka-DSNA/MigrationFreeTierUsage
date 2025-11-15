@@ -60,6 +60,7 @@ def process_file(path):
                     "old_line": line.strip(),
                     "new_line": new_line.strip(),
                     "status": "accepted"
+    
                 })
                 lines[i] = new_line
                 modified = True
